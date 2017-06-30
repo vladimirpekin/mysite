@@ -25,7 +25,7 @@
   
   <p>
     
-    The segment 8n2vf7jr1rsd has been set up to include users who have viewed a specific page.  It has the following criteria
+    The segment 8mgp86o736sr has been set up to include users who have viewed from specific browser.  It has the following criteria
     <pre>
 [
   {
@@ -33,9 +33,9 @@
     "filters": [
       {
         "type": "event",
-        "group": "url",
+        "group": "browser",
         "items": [
-          "http://sust-22ff9a11b484452e8c8f48b7a4584c63.s3-website-eu-west-1.amazonaws.com/8n2vf7jr1rsd"
+          "Chrome"
         ]
       }
     ]
@@ -63,7 +63,7 @@
     
     When start is pressed the following happens: 
     <ol>
-      <li> A page view event is sent to the url http://sust-22ff9a11b484452e8c8f48b7a4584c63.s3-website-eu-west-1.amazonaws.com/8n2vf7jr1rsd </li>
+      <li> A page view event is sent.</li>
       <li> After the delay entered above the segment membership is tested with getUserSegmentIds()</li>
       <li> The results are displayed in the table below</li>
       <li> The criteria to halt is evaluated. If any of the below is true then we halt otherwise we loop back to item 2</li>
