@@ -16,6 +16,9 @@
 <body>
   <div id="title"><h1>Segment Update Speed Test (SUST) v1.1</h1> <h2 class=""> (with stop)</h2/div>
   <form id="entry" action'/'>
+    <!-- Rounded switch -->
+    <label class="switch"><input type="checkbox" id='selectedSegment'> <div class="slider round"></div>
+</label>
     <div><label><input type="text" id='interval' value='1' />Minimum delay between response and next request</label></div>
     <div><label><input type="text" id='stableCondition' value='20'>Sequence of true's required before membership considered stable</label></div>
     <div><label><input type="text" id='max' value='-1'>Maximum iterations (-1 = unlimited)</label></div>
