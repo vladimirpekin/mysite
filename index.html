@@ -16,16 +16,16 @@
     </head>
 
   <body>
-    <script>
-     cX.callQueue.push(['invoke', function() {
-     var segments = cX.getUserSegmentIds({ persistedQueryId: '0d52fffe453c96686aac3e91f8711d11f565b6ed' });
-     alert('The user is member of the following segments: ' + JSON.stringify(segments));
-     }]);
-    </script>
-        
     <p>
       There is some text
     </p>
     <a href="informacion.html">Assign 8n2vvwqjfdkw segment (Visitor of 2nd github page)</a>
-</body>
+    
+     <script>
+      cX.callQueue.push(['invoke', function() {
+      var segments = cX.getUserSegmentIds({ persistedQueryId: '0d52fffe453c96686aac3e91f8711d11f565b6ed' });
+      alert('The user is member of the following segments: ' + JSON.stringify(segments));
+      }]);
+    </script>
+  </body>
 </html>
