@@ -43,7 +43,7 @@ src="https://www.facebook.com/tr?id=563513137192492&ev=PageView&noscript=1"
 　  cX.callQueue.push(['invoke', function() {
 　　var segments = cX.getUserSegmentIds({ persistedQueryId: '0d52fffe453c96686aac3e91f8711d11f565b6ed', maxAge:0 });
 　　fbq('trackCustom', 'CxSegments', {segmentIds: segments});
-    document.getElementById("segmentsList").innerHTML= JSON.stringify(segments);
+    document.getElementById("segmentsList").innerHTML= "User's segments: "JSON.stringify(segments);
 　}]);
 
 </script>
