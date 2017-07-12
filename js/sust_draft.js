@@ -69,7 +69,7 @@ function getUserSegmentIdsCallbackGenerator (i, rowId, time, ms, doNext){
 var start = function(){
 
   
-  cX.callQueue.push(['sendPageViewEvent', { 'location': baseUrl + segmentId}, function(){
+  cX.callQueue.push(['sendPageViewEvent', { 'location': baseUrl}, function(){
     var intervalMs = parseFloat(document.getElementById("interval").value) * 1000;
     var stableCondition = parseInt(document.getElementById("stableCondition").value);
     var max = parseInt(document.getElementById("max").value);
