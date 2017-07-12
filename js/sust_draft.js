@@ -1,7 +1,7 @@
 var data = [];
 var segmentId = '8mrt6p44w6an';
 var siteId = '9222343198115948874';
-var baseUrl = 'http://relevant.fi/'
+var baseUrl = 'http://relevant.fi/mitenvoimmeauttaa/yhteistyokumppani/'
 var pId = '76b094c3e68cd0b28451d2d65331e4582ff215d1';
 document.getElementById('sId').textContent = segmentId;
 
