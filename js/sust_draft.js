@@ -1,8 +1,8 @@
 var data = [];
-var segmentId = '8mrssd6kkpmk';
-var siteId = '1141844407823976462';
-var baseUrl = 'http://sust-22ff9a11b484452e8c8f48b7a4584c63.s3-website-eu-west-1.amazonaws.com/'
-var pId = '0d52fffe453c96686aac3e91f8711d11f565b6ed';
+var segmentId = '8o026r6opea2';
+var siteId = '9222343198115948874';
+var baseUrl = 'http://relevant.fi/'
+var pId = '76b094c3e68cd0b28451d2d65331e4582ff215d1';
 document.getElementById('sId').textContent = segmentId;
 
 var cX = cX || {}; cX.callQueue = cX.callQueue || [];
