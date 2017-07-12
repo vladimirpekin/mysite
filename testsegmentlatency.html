@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUST</title>
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://scdn.cxense.com/cx.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300"/>
+    <link rel="stylesheet" type="text/css" href="./style/main.css"/>
+
+</head>
+<body>
+  <div id="title"><h1>Segment Update Speed Test (SUST) v1.1</h1> <h2 class=""> (with stop)</h2/div>
+  <form id="entry" action'/'>
+    <!-- <label for="selectedSegment">Chrome segment</label> <input type="radio" name="segment" id="8mgp86o736sr" value="8mgp86o736sr"><br>
+    <label for="selectedSegment">Chrome segment</label> <input type="radio" name="segment" id="8mgp86o736sr" value="8mgp86o736sr"><br> -->
+    <div><label><input type="text" id='interval' value='1' />Minimum delay between response and next request</label></div>
+    <div><label><input type="text" id='stableCondition' value='20'>Sequence of true's required before membership considered stable</label></div>
+    <div><label><input type="text" id='max' value='-1'>Maximum iterations (-1 = unlimited)</label></div>
+    <input type="button" value="Start" id="startBtn"/>
+  </form>
+  
+  <p>
+    
+    The segment 8mrssd6kkpmk has been set up to include users who have viewed http://sust-22ff9a11b484452e8c8f48b7a4584c63.s3-website-eu-west-1.amazonaws.com/8mrssd6kkpmk.  It has the following criteria
+    <pre>
+[
+  {
+    "type": "and",
+    "filters": [
+      {
+        "type": "event",
+        "group": "url",
+        "items": [
+          "http://sust-22ff9a11b484452e8c8f48b7a4584c63.s3-website-eu-west-1.amazonaws.com/8mrssd6kkpmk"
+        ]
+      }
+    ]
+  }
+]
+    </pre>
+    
+        </pre>
+    
+        The outer part of the filter (not shown in the cxense UI) has the following 
+    
+<pre>
+[
+  {
+    "type": "time",
+    "start": "-1d",
+    "stop": "-0d",
+    "filter": {
+      "type": "and",
+      "filters": [ ... see above ...]
+    }
+  }
+]
+  </pre>
+    
+    When start is pressed the following happens: 
+    <ol>
+      <li> A page view event is sent.</li>
+      <li> After the delay entered above the segment membership is tested with getUserSegmentIds()</li>
+      <li> The results are displayed in the table below</li>
+      <li> The criteria to halt is evaluated. If any of the below is true then we halt otherwise we loop back to item 2</li>
+      <ul>
+          <li>Has the maximum number of iterations been reached?</li>
+          <li>Has there been a sufficient number of sequential true values to meet the criteria for a stable segment membership?</li>
+          
+      </ul>
+    </ol>
+    
+    <b>For a valid test use a clean browser profile by closing all incognito windows then open this page in incognito mode.</b> Using an existing user session which already has the page view event in the last 24 hours invalidates this test.
+
+    
+  </p>
+  
+  <table id="target">
+    <tr>
+      <th>Segment </th>
+      <td colspan="3" id="sId">-</td>
+    </tr>
+    <tr>
+      <th>Iternation</th>
+      <th />
+      <th>Member</td>
+      <th>Elapsed duration of test at response</td>
+    </tr>
+  </table>
+  
+  <script src="./js/sust_draft.js"></script>
+</body>
