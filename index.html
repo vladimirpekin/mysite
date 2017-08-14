@@ -5,6 +5,11 @@
       var cX = cX || {}; cX.callQueue = cX.callQueue || [];
       cX.callQueue.push(['setSiteId', '1141844407823976462']);
       cX.callQueue.push(['sendPageViewEvent']);
+　  cX.callQueue.push(['invoke', function() {
+cX.setEventAttributes({ origin: 'q11-website', persistedQueryId: '43bf4794e820b7ca1a237d7ab425ecb59dc2d17d' });
+cX.sendEvent('Social', { action: 'liked_twitter' });
+　}]);
+      
     </script>
 
     <script type="text/javascript">
