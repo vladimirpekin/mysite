@@ -43,6 +43,7 @@ twttr.events.bind(
   function (event) {
 	cX.setEventAttributes({ origin: 'q11-website', persistedQueryId: '43bf4794e820b7ca1a237d7ab425ecb59dc2d17d' }); // TODO: Insert your origin and persisted query id here!
 	cX.sendEvent('Social', { action: 'tweeted_twitter' });
+	  console.log("tweet!");
   }
 );
 </script>
