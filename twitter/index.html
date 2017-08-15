@@ -1,7 +1,50 @@
 <html>
-  
+<head>
+    <!-- Cxense script begin -->
+    <script type="text/javascript">
+      var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+      cX.callQueue.push(['setSiteId', '1141844407823976462']);
+      cX.callQueue.push(['sendPageViewEvent']);
+    </script>
+
+    <script type="text/javascript">
+      (function(d,s,e,t){e=d.createElement(s);e.type='text/java'+s;e.async='async';
+      e.src='http'+('https:'===location.protocol?'s://s':'://')+'cdn.cxense.com/cx.js';
+      t=d.getElementsByTagName(s)[0];t.parentNode.insertBefore(e,t);})(document,'script');
+    </script>
+    <!-- Cxense script end -->
+</head>
+
 <body>
-<blockquote class="twitter-tweet" data-lang="ru"><p lang="und" dir="ltr"><a href="https://t.co/ktORCdrPNL">pic.twitter.com/ktORCdrPNL</a></p>&mdash; Эльдар Джарахов (@DLGreez) <a href="https://twitter.com/DLGreez/status/897363905164578816">15 августа 2017 г.</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- Twitter script begin -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<!-- Twitter script end -->
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="penkin_v">Tweet</a>
+
+<script>
+twttr.events.bind(
+  'tweet',
+  function (event) {
+	cX.setEventAttributes({ origin: 'q11-website', persistedQueryId: '43bf4794e820b7ca1a237d7ab425ecb59dc2d17d' }); // TODO: Insert your origin and persisted query id here!
+	cX.sendEvent('Social', { action: 'tweeted_twitter' });
+  }
+);
+</script>
 </body>
 </html>
