@@ -38,14 +38,20 @@
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="penkin_v">Tweet</a>
 
 <script>
-twttr.events.bind(
-  'tweet',
-  function (event) {
+function tweetIntentToAnalytics (intentEvent) {
+  if (!intentEvent) return;
+	cX.callQueue.push(['invoke', function() {
 	cX.setEventAttributes({ origin: 'q11-website', persistedQueryId: '43bf4794e820b7ca1a237d7ab425ecb59dc2d17d' }); // TODO: Insert your origin and persisted query id here!
-	cX.sendEvent('Social', { action: 'tweeted_twitter' });
-	  console.log("tweet!");
-  }
-);
+	cX.sendEvent('Social', { action: 'tweet_twitter' });
+	console.log("tweet!");
+　}]);
+}
+
+// Wait for the asynchronous resources to load
+twttr.ready(function (twttr) {
+  // Now bind our custom intent events
+  twttr.events.bind('tweet', tweetIntentToAnalytics);
+});
 </script>
 </body>
 </html>
