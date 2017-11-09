@@ -1,19 +1,25 @@
 <!DOCTYPE HTML>
 <html>
-    <body>
-        <div id="targetElement"></div>
-          
+    <head>
         <script type="text/javascript">
-            var cX = cX || {}; 
-            cX.callQueue = cX.callQueue || [];
-            cX.callQueue.push(['insertAdSpace', {
-    adSpaceId:'000000015fcc20fc',
-    adUnitWidth:540,
-    adUnitHeight:70,
-    initialHorizontalAdUnits:1,
-    initialVerticalAdUnits:0
-}]);
-        </script>
-             
+ (function() { try { var scriptEl = document.createElement('script'); scriptEl.type = 'text/javascript'; scriptEl.async = 'async';
+ scriptEl.src = ('https:' == document.location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://cdn.cxense.com/cx.js';
+ var targetEl = document.getElementsByTagName('script')[0]; targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {}; }());
+</script>
+    </head>
+    <body>
+        <div id="ppnAd_300x250" style="display:none"></div>
+<script type="text/javascript">
+  var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+  cX.callQueue.push(['insertAdSpace', {
+    adSpaceId: '000000015fcc20fc',
+    insertBeforeElementId: 'ppnAd_300x250',
+    width: 540, height: 70,
+          initialHorizontalAdUnits:1,
+    initialVerticalAdUnits:0,
+    renderTemplateUrl: 'http://cdn.cxpublic.com/Swiss_Banner_300x250.html'
+  } ]);
+</script>
+            
     </body>
 </html>
