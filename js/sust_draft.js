@@ -39,7 +39,7 @@ function appendNewRow(i){
 function delayCall (i, intervalMs, startTime, rowId, doNext){
   data.push(null)
   setTimeout(function(){
-    cX.getUserSegmentIds({persistedQueryId:pId, maxAge:0, callback:getUserSegmentIdsCallbackGenerator(i, rowId, startTime, intervalMs, doNext)})
+    cX.getUserSegmentIds({persistedQueryId:pId, callback:getUserSegmentIdsCallbackGenerator(i, rowId, startTime, intervalMs, doNext)})
   }, intervalMs)
 }
 
